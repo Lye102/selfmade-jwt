@@ -1,3 +1,6 @@
-import { getAsciiDecs } from "./modules/getAsciiDecs.ts";
+import { convertBinary } from "./modules/convertBinary.ts";
+import { getAsciiDec } from "./modules/getAsciiDec.ts";
 
-console.log(getAsciiDecs("text"))
+const text = "HelloWorld";
+const dec = getAsciiDec(text);
+console.log(convertBinary(dec));
