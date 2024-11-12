@@ -1,5 +1,5 @@
 // deno-lint-ignore-file
-export function convertBinary(dec: number[]) {
+export function toBinary(dec: number[]): string {
   const convertedToBinary = dec.map(function(value) {
     const binary: number[] = [];
 

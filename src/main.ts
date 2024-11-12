@@ -1,6 +1,1 @@
-import { convertBinary } from "./modules/convertBinary.ts";
-import { getAsciiDec } from "./modules/getAsciiDec.ts";
-
-const text = "HelloWorld";
-const dec = getAsciiDec(text);
-console.log(convertBinary(dec));
+import { toBase64 } from "./lib/toBase64.ts";
