@@ -1,5 +1,5 @@
 // ASCII文字の詳細情報を表す型
-type ASCIICharacter = {
+export type ASCIICharacter = {
   char: string;
   dec: number;
   hex: string;
@@ -114,20 +114,3 @@ export const ASCII_CHARS: ASCIICharacter[] = [
   // DEL文字
   { char: 'DEL', dec: 127, hex: '0x7F', description: '削除', category: 'control' },
 ];
-
-// ユーティリティ関数
-export const getAsciiChar = (dec: number): ASCIICharacter | undefined => 
-  ASCII_CHARS.find(char => char.dec === dec);
-
-export const getAsciiByHex = (hex: string): ASCIICharacter | undefined => 
-  ASCII_CHARS.find(char => char.hex.toLowerCase() === hex.toLowerCase());
-
-
-// 使用例
-const examples = () => {
-  // 10進数から文字を取得
-  console.log(getAsciiChar(65)); // { char: 'A', dec: 65, hex: '0x41', ... }
-
-  // 16進数から文字を取得
-  console.log(getAsciiByHex('0x41')); // { char: 'A', dec: 65, hex: '0x41', ... }
-};
