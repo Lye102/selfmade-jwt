@@ -1,3 +1,3 @@
-import { getAsciiChar } from "../data/asciiTable.ts";
+import { getAsciiDecs } from "./convert.ts";
 
-console.log(getAsciiChar(76));
+console.log(getAsciiDecs("text"))
