@@ -1,4 +1,4 @@
-import { ASCII_CHARS, type ASCIICharacter } from "../data/asciiTable.ts";
+import { ASCII_CHARS, type ASCIICharacter } from "../../data/asciiTable.ts";
 
 export const getAsciiDecs = (char: string) => {
   const splitChars = char.split("");
