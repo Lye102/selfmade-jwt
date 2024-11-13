@@ -1,11 +1,5 @@
-// ASCII文字の詳細情報を表す型
-export type ASCIICharacter = {
-  char: string;
-  dec: number;
-  hex: string;
-  description: string;
-  category: 'control' | 'printable' | 'extended';
-};
+import type { ASCIICharacter } from "../src/types/types.ts";
+
 
 // ASCII文字コードの完全なマッピング
 export const ASCII_CHARS: ASCIICharacter[] = [
@@ -20,10 +14,10 @@ export const ASCII_CHARS: ASCIICharacter[] = [
   { char: 'BEL', dec: 7, hex: '0x07', description: 'ベル', category: 'control' },
   { char: 'BS', dec: 8, hex: '0x08', description: 'バックスペース', category: 'control' },
   { char: 'HT', dec: 9, hex: '0x09', description: '水平タブ', category: 'control' },
-  { char: 'LF', dec: 10, hex: '0x0A', description: '改行', category: 'control' },
+  { char: '\n', dec: 10, hex: '0x0A', description: '改行', category: 'control' },
   { char: 'VT', dec: 11, hex: '0x0B', description: '垂直タブ', category: 'control' },
   { char: 'FF', dec: 12, hex: '0x0C', description: '改ページ', category: 'control' },
-  { char: 'CR', dec: 13, hex: '0x0D', description: 'キャリッジリターン', category: 'control' },
+  { char: '\r', dec: 13, hex: '0x0D', description: 'キャリッジリターン', category: 'control' },
   { char: 'SO', dec: 14, hex: '0x0E', description: 'シフトアウト', category: 'control' },
   { char: 'SI', dec: 15, hex: '0x0F', description: 'シフトイン', category: 'control' },
   { char: 'DLE', dec: 16, hex: '0x10', description: 'データリンクエスケープ', category: 'control' },

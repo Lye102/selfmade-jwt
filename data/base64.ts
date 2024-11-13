@@ -1,6 +1,4 @@
-type BinaryCharMap = {
-  [key: string]: string;
-}
+import type { BinaryCharMap } from "../src/types/types.ts";
 
 export const BINARY_CHAR_MAP: BinaryCharMap = {
   '000000': 'A',
@@ -68,6 +66,3 @@ export const BINARY_CHAR_MAP: BinaryCharMap = {
   '111110': '+',
   '111111': '/',
 } as const;
-
-// 使用例
-console.log(BINARY_CHAR_MAP['000000']); // 'A'
