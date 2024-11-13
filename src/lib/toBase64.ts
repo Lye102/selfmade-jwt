@@ -4,10 +4,15 @@ import { getDecimal } from "../modules/getDecimal.ts";
 export function toBase64(text: string) {
   const dec = getDecimal(text);
   const convertedToBinary = toBinary(dec);
+  const [slicedBinary, isPadding] = splitBinary(convertedToBinary);
 
+  return isPadding;
+}
+
+function splitBinary(convertedToBinary: string) {
   const binaryLength = convertedToBinary.split("").length;
   const sixBit = 6;
-  let addedZero = false;
+  let isPadding = false;
 
   const slicedBinary = [];
   for (let i=0; i<binaryLength; i+=sixBit) {
@@ -15,15 +20,12 @@ export function toBase64(text: string) {
 
     while (binary.length !== sixBit) {
       binary.push("0");
-      addedZero = true;
+      isPadding = true;
     }
     slicedBinary.push(binary.join(""));
   }
-  slicedBinary.push(addedZero);
 
-  return slicedBinary;
+  return [slicedBinary, isPadding];
 }
 
-console.log(toBase64("Hel"));
-console.log(btoa("Hel"));
-// SGVsbG8=
+
