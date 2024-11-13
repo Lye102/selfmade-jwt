@@ -1,6 +1,8 @@
-import { convertBinary } from "./modules/convertBinary.ts";
-import { getAsciiDec } from "./modules/getAsciiDec.ts";
+import { toBase64 } from "./lib/toBase64.ts";
 
-const text = "HelloWorld";
-const dec = getAsciiDec(text);
-console.log(convertBinary(dec));
+const text = "TOpd"
+
+console.log(btoa(text));
+// SGVsbG8=
+
+console.log(toBase64(text));

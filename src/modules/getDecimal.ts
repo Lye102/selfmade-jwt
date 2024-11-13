@@ -1,6 +1,6 @@
-import { ASCII_CHARS, type ASCIICharacter } from "../../data/asciiTable.ts";
+import { ASCII_CHARS, type ASCIICharacter } from "../../data/ascii.ts";
 
-export const getAsciiDec = (char: string) => {
+export function getDecimal(char: string): number[] {
   const splitChars = char.split("");
   const asciiDecs: number[] = [];
 
