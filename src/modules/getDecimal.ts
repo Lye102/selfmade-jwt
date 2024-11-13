@@ -1,4 +1,6 @@
-import { ASCII_CHARS, type ASCIICharacter } from "../../data/ascii.ts";
+import { ASCII_CHARS } from "../../data/ascii.ts";
+import type { ASCIICharacter } from "../types/types.ts";
+
 
 export function getDecimal(char: string): number[] {
   const splitChars = char.split("");
@@ -14,4 +16,3 @@ export function getDecimal(char: string): number[] {
 
   return asciiDecs;
 };
-
