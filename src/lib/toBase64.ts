@@ -1,6 +1,16 @@
 import { toBinary } from "../modules/toBinary.ts";
 import { getDecimal } from "../modules/getDecimal.ts";
 import { BINARY_CHAR_MAP } from "../../data/base64.ts";
+import type { Header, Payload } from "../types/types.ts";
+
+export function toBase64URL(json: Header | Payload) {
+  const jsonToString = JSON.stringify(json);
+  const base64Chars = toBase64(jsonToString);
+  return base64Chars
+    .replaceAll("+", "-")
+    .replaceAll("/", "_")
+    .replaceAll("=", "");
+}
 
 export function toBase64(text: string) {
   const dec = getDecimal(text);
