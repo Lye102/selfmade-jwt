@@ -1,6 +1,8 @@
 import { toBase64 } from "./lib/toBase64.ts";
 
-console.log(btoa("Hel"));
+const text = "TOpd"
+
+console.log(btoa(text));
 // SGVsbG8=
 
-console.log(toBase64("Hel"))
+console.log(toBase64(text));

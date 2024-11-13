@@ -1,6 +1,6 @@
 // deno-lint-ignore-file
 export function toBinary(dec: number[]): string {
-  const convertedToBinary = dec.map(function(value) {
+  const decToBinary = dec.map(function(value) {
     const binary: number[] = [];
 
     for (let i=0; value>0; i++) {
@@ -14,6 +14,6 @@ export function toBinary(dec: number[]): string {
     return binary.reverse();
   });
 
-  const joinedBinaries = convertedToBinary.map((binary) => binary.join(""));
+  const joinedBinaries = decToBinary.map((binary) => binary.join(""));
   return joinedBinaries.join("");
 }
